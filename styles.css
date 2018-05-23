@@ -11,6 +11,8 @@ h1 {
 }
 
 div {
+	border-radius: 10px;
+	box-shadow: 2.5px 2.5px #4c4c4c;
 	padding-left: 3em;
 	padding-top: 0.5em;
 	padding-right: 0.5em;
@@ -35,6 +37,7 @@ div.headers {
 
 div.searchbar {
 	background-color: #4c4c4c;
+	box-shadow: 2.5px 2.5px #000000;
 	font-family: "pt mono";
 	color: #ffffff;
 	margin-top: 0.5em;
