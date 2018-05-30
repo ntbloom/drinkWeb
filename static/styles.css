@@ -1,0 +1,78 @@
+
+
+body {
+	background-color: #ffffff;
+}
+
+h1 {
+	font-family: "futura";
+	color: #ffffff;
+	font-size: 14pt;
+	font-weight: normal;
+	text-align: left;
+}
+
+h1.resultHeaders {
+	color: #000000;
+}
+
+div {
+	border-radius: 10px;
+	padding-left: 6em;
+	padding-top: 0.5em;
+	padding-right: 0.5em;
+	padding-bottom: 0.5em;
+	margin-bottom: 1em;
+}
+
+div.logo {
+	background-color: #100656;
+	height: 140px;
+	padding-left: 2em;
+	padding-top: 1em;
+	padding-right: 0em;
+	padding-bottom: 0em;
+	text-align: left
+}
+
+div.headers {
+	background-color: #a5693d;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+}
+
+div.searchbar {
+	background-color: #4c4c4c;
+	font-family: "pt mono";
+	color: #ffffff;
+	margin-top: 1em;
+}
+
+div.results {
+	color: #000000;
+}
+
+p {
+	font-family: "pt mono";
+	font-size: 1em;
+	padding-left: 3em;
+}
+
+p.directions {
+	color: #ffffff;
+	font-size: .75em;
+}
+
+form {
+	padding-left: 3em;
+}
+
+footer {
+	color: #4c4c4c;
+	font-family: "pt mono";
+	font-size: 0.75em;
+	position: center;
+	bottom: 0;
+	margin-top: 1em;
+	text-align: center;
+}
