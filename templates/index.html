@@ -24,7 +24,7 @@
 <p class="directions">
   enter ingredients into the text boxes below</br>
   separate multiple ingredients with a comma</br></br>
-  :: included ingredients will be in every results</br>
+  :: included ingredients will be in every result</br>
   :: no excluded ingredients will be in the results</br>
 </p>
 </div>
@@ -33,9 +33,11 @@
 <h1>
   find some drinks
 </h1>
-  <form class="getMeDrunk" action= "localhost:5000" method="post">
-    :: included ingredients <input type="text" name="includedIngredients" size=40></br></br>
-    :: excluded ingredients <<input type="text" name="excludedIngredients" size=40></br></br>
+  <form class="getMeDrunk" action="{{ url_for('printDrinks') }}" method="post">
+    :: included ingredients <input type="text" name="includedIngredients" size=40> ::</br></br>
+<!--
+    :: excluded ingredients <input type="text" name="excludedIngredients" size=40> ::</br></br>
+-->
     <input type="submit" value="submit">
   </form>
 </div>
