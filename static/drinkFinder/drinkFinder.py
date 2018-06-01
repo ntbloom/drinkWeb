@@ -12,49 +12,33 @@ How to use this search function in the command line:
 
 import functions
 
-includedIngredients = []
-optionalIngredients = []
-excludedIngredients = []
+includedIngredients = ['gin']
+excludedIngredients = ['lime']
 allDrinks = functions.allDrinks()
 
-
-def drinkSearch(includedIngredients, optionalIngredients, excludedIngredients):
+def drinkSearch(includedIngredients, excludedIngredients):
     '''master search algorithm'''
     drinks = set(allDrinks)
-    for ingredient in includedIngredients:
-        included = functions.ingredientRegex(ingredient)
-        drinks = drinks & included
-    # print("drinks after inclusion loop: ", drinks, "\n\n")    #for testing only
+    if len(includedIngredients)>0:
+        for ingredient in includedIngredients:
+            included = functions.ingredientRegex(ingredient)
+            drinks = drinks & included
+    print('\n\n', 'drinks after inclusion loop: ', sorted(drinks), '\n\n') #for debugging only
 
-    includedIngredients.pop()   # removes empty string from input() function, delete for web app
-    if len(includedIngredients)==0:
-        drinks = set(allDrinks)
-
-    for ingredient in optionalIngredients:
-        optional = functions.ingredientRegex(ingredient)
-        options = drinks | optional
-    # print("drinks after optional loop: ", drinks, "\n\n")  # for testing only
-
-
-    optionalIngredients.pop()   # removes empty string from input() function, delete for web app
-    if len(optionalIngredients)>0:
-        drinks = options | drinks
-
-    for ingredient in excludedIngredients:
-        excluded = functions.ingredientRegex(ingredient)
-        exclusions = drinks - excluded
-        # print("drinks after excluded loop: ", drinks) #for testing only
-
-    excludedIngredients.pop()   # removes empty string from input() function, delete for web app
     if len(excludedIngredients)>0:
-        drinks = drinks - exclusions
+        for ingredient in excludedIngredients:
+            excluded = functions.ingredientRegex(ingredient)
+            drinks = drinks - excluded
+    print('drinks after excluded loop: ', sorted(drinks), '\n\n') #for debugging only
 
     drinks = list(drinks)
-    return drinks
+    return sorted(drinks)
 
 
-searchResults = sorted(drinkSearch(includedIngredients, optionalIngredients, excludedIngredients))
+searchResults = sorted(drinkSearch(includedIngredients, excludedIngredients))
+print('searchResults: ', searchResults) #for debugging only
 
 def printDrinks():
     for result in searchResults:
         print(result, '\n', functions.getRecipe(result), '\n\n')
+

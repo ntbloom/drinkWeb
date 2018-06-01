@@ -1,4 +1,4 @@
-<!-- index.html, main page for drinkBase website -->
+index.html, main page for drinkBase website
 
 <!doctype html>
 <html>
@@ -35,9 +35,8 @@
 </h1>
   <form class="getMeDrunk" action="{{ url_for('printDrinks') }}" method="post">
     :: included ingredients <input type="text" name="includedIngredients" size=40> ::</br></br>
-<!--
     :: excluded ingredients <input type="text" name="excludedIngredients" size=40> ::</br></br>
--->
+
     <input type="submit" value="submit">
   </form>
 </div>
@@ -45,6 +44,7 @@
 <div class="results">
   <h1 class="resultHeaders">
     try one of these
+    {{ test }}
   </h1>
   <p class="recipes">
     {{ drinks }}
