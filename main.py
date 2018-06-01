@@ -1,7 +1,7 @@
 #! usr/bin/env python3
 
 from flask import Flask, render_template, request
-from static import drinkFinder
+import drinkFinder
 
 app = Flask(__name__)
 
@@ -12,10 +12,13 @@ excluded = []
 
 @app.route('/', methods=['POST'])
 def printDrinks():
-    included = (request.form['includedIngredients'])
-    excluded = (request.form['excludedIngredients'])
-    possibleDrinks = drinkFinder.drinkSearch(included, excluded)
-    return possibleDrinks
+    included = list((request.form['includedIngredients']))
+    print('included: ', included)
+    excluded = list((request.form['excludedIngredients']))
+    print('excluded: ', excluded)
+    return str(drinkFinder.drinkSearch(included, excluded))
+    included.clear()
+    excluded.clear()
 
 @app.route('/')
 def index():
