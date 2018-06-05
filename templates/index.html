@@ -45,12 +45,9 @@ index.html, main page for drinkBase website
 
 <div class="results">
   <h1 class="resultHeaders">
-    try one of these
-    {{ test }}
+    try one of these:
   </h1>
-  <p id="recipes">
-    {{ drinks }}
-  </p>
+  <p> {{ drinks | safe }} </p>
 
 <footer>
   website by ntbloom. &#x00A9; 2018 drinkBase

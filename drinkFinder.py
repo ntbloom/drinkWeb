@@ -72,14 +72,19 @@ def getRecipe(drinkName):
     '''looks up and returns recipe using SQL'''
     cursor.execute('SELECT ingredient FROM ingredients WHERE name = ?', (drinkName,))
     ingredientList = cursor.fetchall()
-    recipe = {}
+    recipe = []
     for i in ingredientList:
         cursor.execute('SELECT amount FROM ingredients where name = ? AND ingredient = ?', (drinkName, i))
         amount = cursor.fetchall()
+        if int(amount[0]) == amount[0]:
+            amount = str(int(amount[0]))
+        else:
+            amount = str(amount[0])
         cursor.execute('SELECT unit FROM ingredients where name = ? AND ingredient = ?', (drinkName, i))
         unit = cursor.fetchall()
-        recipe[i] = str(amount[0]) + ' ' + unit[0]
-    recipe = str(recipe)
+        unit = str(unit[0])
+        recipe.append(amount + ' ' + unit + ' ' + i)
+    # recipe = str(recipe)
     return recipe
 
 def printDrinks():
