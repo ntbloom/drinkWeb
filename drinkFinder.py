@@ -11,7 +11,7 @@ cursor = drinkBase.cursor()
 # create drinkDictionary from SQL database
 drinkNames = []
 drinkList = []
-drinkDictionary = {} # list of all possible drinks
+drinkDictionary = {}
 cursor.execute('SELECT name FROM ingredients GROUP BY name')
 drinkList = []
 drinkList = cursor.fetchall()
@@ -21,7 +21,7 @@ for name in drinkList:
     name = name[0]
     ingredientTuple = cursor.fetchall()
     drinkDictionary[name] = ingredientTuple
-drinkNames = sorted(drinkDictionary.keys()) # a list of all drink names
+drinkNames = sorted(drinkDictionary.keys()) # a list of all possible drink names
 
 # regex function
 def ingredientRegex(ingredient=''):
@@ -39,8 +39,6 @@ def ingredientRegex(ingredient=''):
                 possibleDrinks.add(drink)
     return possibleDrinks
 
-
-
 # master search function called from webpage/Flask app
 def drinkSearch(incIngredients, exclIngredients):
     '''master search algorithm'''
@@ -49,25 +47,20 @@ def drinkSearch(incIngredients, exclIngredients):
         for ingredient in incIngredients:
             included = ingredientRegex(ingredient)
             drinks = drinks & included
-    # print('\n\n', str(len(drinks)), 'drinks after inclusion loop: ', sorted(drinks), '\n\n') #for debugging only
-
     if len(exclIngredients)>1:
         for ingredient in exclIngredients:
             excluded = ingredientRegex(ingredient)
-            # print('excluded drinks: ', excluded) # for debugging only
+            # print('excluded drinks: ', excluded) #for debugging only
             drinks = drinks - excluded
-
-    # debugging exclusion loop
-    print('length of excluded: ', len(exclIngredients))
-    print('excluded ingredients: ', exclIngredients)
-    print(len(drinks), ' drinks after excluded loop: ', sorted(drinks), '\n\n')
+    # # for debugging drinkSearch
+    # print('\n\n', str(len(drinks)), 'drinks after inclusion loop: ', sorted(drinks), '\n\n') #for debugging only
+    # print('length of excluded: ', len(exclIngredients))
+    # print('excluded ingredients: ', exclIngredients)
+    # print(len(drinks), ' drinks after excluded loop: ', sorted(drinks), '\n\n')
 
     drinks = sorted(drinks)
     return drinks
 
-
-
-# printing recipe component
 def getRecipe(drinkName):
     '''looks up and returns recipe using SQL'''
     cursor.execute('SELECT ingredient FROM ingredients WHERE name = ?', (drinkName,))
@@ -84,13 +77,7 @@ def getRecipe(drinkName):
         unit = cursor.fetchall()
         unit = str(unit[0])
         recipe.append(amount + ' ' + unit + ' ' + i)
-    # recipe = str(recipe)
     return recipe
-
-def printDrinks():
-    for result in searchResults:
-        print(result, '\n', getRecipe(result), '\n\n')
-
 
 '''debugging steps'''
 

@@ -14,9 +14,9 @@ excluded = []
 @app.route('/results', methods=['POST'])
 def printDrinks():
     included.insert(0, (request.form['includedIngredients']))
-    # print('\n\n', 'included: ', included) # for debugging
+    print('\n\n', 'included: ', included) # for debugging
     excluded.insert(0, (request.form['excludedIngredients']))
-    # print('\n\n', 'excluded: ', excluded) # for debugging
+    print('\n\n', 'excluded: ', excluded) # for debugging
     rawDrinks = list(drinkFinder.drinkSearch(included, excluded))
     master = []
     for drink in rawDrinks:
@@ -26,10 +26,9 @@ def printDrinks():
         drinks['recipe'] = ingredients
         master.append(drinks)
     print('master: ', master)
-    # drinks = json.dumps(drinks)
     included.clear()
     excluded.clear()
-    return render_template('results.html', drinks=master)
+    return render_template('results.html', drinks=master, qty = len(master))
 
 @app.route('/')
 def index():
