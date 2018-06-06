@@ -4,7 +4,7 @@
 import sqlite3, re
 
 # connection to drinkBase.db
-drinkBase = sqlite3.connect('static/drinkBase.db', check_same_thread=False)
+drinkBase = sqlite3.connect('drinkBase.db', check_same_thread=False)
 drinkBase.row_factory = lambda cursor, row: row[0]
 cursor = drinkBase.cursor()
 
@@ -49,12 +49,12 @@ def drinkSearch(incIngredients, exclIngredients):
         for ingredient in incIngredients:
             included = ingredientRegex(ingredient)
             drinks = drinks & included
-    print('\n\n', str(len(drinks)), 'drinks after inclusion loop: ', sorted(drinks), '\n\n') #for debugging only
+    # print('\n\n', str(len(drinks)), 'drinks after inclusion loop: ', sorted(drinks), '\n\n') #for debugging only
 
     if len(exclIngredients)>1:
         for ingredient in exclIngredients:
             excluded = ingredientRegex(ingredient)
-            print('excluded drinks: ', excluded) # for debugging only
+            # print('excluded drinks: ', excluded) # for debugging only
             drinks = drinks - excluded
 
     # debugging exclusion loop
