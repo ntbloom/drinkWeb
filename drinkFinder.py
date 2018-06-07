@@ -47,18 +47,22 @@ def drinkSearch(incIngredients, exclIngredients):
         for ingredient in incIngredients:
             included = ingredientRegex(ingredient)
             drinks = drinks & included
-    if len(exclIngredients)>1:
-        for ingredient in exclIngredients:
-            excluded = ingredientRegex(ingredient)
-            # print('excluded drinks: ', excluded) #for debugging only
-            drinks = drinks - excluded
-    # # for debugging drinkSearch
-    # print('\n\n', str(len(drinks)), 'drinks after inclusion loop: ', sorted(drinks), '\n\n') #for debugging only
-    # print('length of excluded: ', len(exclIngredients))
-    # print('excluded ingredients: ', exclIngredients)
-    # print(len(drinks), ' drinks after excluded loop: ', sorted(drinks), '\n\n')
-
+    # print('\n\nincluded drinks: ', sorted(drinks), '\n\n') #for debugging only
+    # excluded = []
+    for ingredient in exclIngredients:
+         excluded = set(ingredientRegex(ingredient))
+         # excluded.append(unwanted)
+    # print('excluded drinks: ', excluded, '\n\n') #for debugging only
+    if len(exclIngredients)>0:
+        drinks = sorted(drinks - excluded)
     drinks = sorted(drinks)
+    
+    # debugging
+    print('length of included: ', len(incIngredients), '\n')   #for debugging only
+    print('included ingredients: ', incIngredients, '\n')  #for debugging only
+    print('length of excluded: ', len(exclIngredients), '\n')   #for debugging only
+    print('excluded ingredients: ', exclIngredients, '\n')  #for debugging only
+    
     return drinks
 
 def getRecipe(drinkName):
