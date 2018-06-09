@@ -40,27 +40,26 @@ def ingredientRegex(ingredient=''):
     return possibleDrinks
 
 # master search function called from webpage/Flask app
-def drinkSearch(incIngredients, exclIngredients):
+def drinkSearch(incIngredients='', exclIngredients=''):
     '''master search algorithm'''
     drinks = set(drinkNames)
     if len(incIngredients)>0:
         for ingredient in incIngredients:
             included = ingredientRegex(ingredient)
             drinks = drinks & included
+
     # print('\n\nincluded drinks: ', sorted(drinks), '\n\n') #for debugging only
-    # excluded = []
-    for ingredient in exclIngredients:
-         excluded = set(ingredientRegex(ingredient))
-         # excluded.append(unwanted)
     # print('excluded drinks: ', excluded, '\n\n') #for debugging only
     if len(exclIngredients)>0:
-        drinks = sorted(drinks - excluded)
+        for ingredient in exclIngredients:
+             unwanted = ingredientRegex(ingredient)
+             drinks -= unwanted
     drinks = sorted(drinks)
     
     # debugging
-    print('length of included: ', len(incIngredients), '\n')   #for debugging only
+    print('length of included: ', len(incIngredients))   #for debugging only
     print('included ingredients: ', incIngredients, '\n')  #for debugging only
-    print('length of excluded: ', len(exclIngredients), '\n')   #for debugging only
+    print('length of excluded: ', len(exclIngredients))   #for debugging only
     print('excluded ingredients: ', exclIngredients, '\n')  #for debugging only
     
     return drinks
