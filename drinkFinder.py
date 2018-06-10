@@ -53,7 +53,7 @@ def drinkSearch(incIngredients='', exclIngredients=''):
     if len(exclIngredients)>0:
         for ingredient in exclIngredients:
              unwanted = ingredientRegex(ingredient)
-             drinks -= unwanted
+             drinks = drinks - unwanted
     drinks = sorted(drinks)
     
     # debugging

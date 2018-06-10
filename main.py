@@ -17,14 +17,14 @@ def printDrinks():
     if len(incl)>1:
         incl = incl.split(',')
         for i in incl:
-            i.strip()
+            i = i.strip()
             included.append(i)
     # print('\n\n', 'included: ', included) # for debugging
     excl = request.form['excludedIngredients']
     if len(excl)>1:
         excl = excl.split(',')
         for i in excl:
-            i.strip()
+            i = i.strip()
             excluded.append(i)
     # print('\n\n', 'excluded: ', excluded) # for debugging
     rawDrinks = list(drinkFinder.drinkSearch(included, excluded))
