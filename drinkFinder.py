@@ -56,10 +56,10 @@ def drinkSearch(incIngredients='', exclIngredients=''):
     drinks = sorted(drinks)
 
     # debugging
-    print('length of included: ', len(incIngredients))   #for debugging only
-    print('included ingredients: ', incIngredients, '\n')  #for debugging only
-    print('length of excluded: ', len(exclIngredients))   #for debugging only
-    print('excluded ingredients: ', exclIngredients, '\n')  #for debugging only
+    # print('length of included: ', len(incIngredients))   #for debugging only
+    # print('included ingredients: ', incIngredients, '\n')  #for debugging only
+    # print('length of excluded: ', len(exclIngredients))   #for debugging only
+    # print('excluded ingredients: ', exclIngredients, '\n')  #for debugging only
 
     return drinks
 

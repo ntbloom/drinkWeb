@@ -47,14 +47,13 @@ def printDrinks():
 def index():
     return render_template('index.html')
 
+# error handling
 @app.errorhandler(404)
 def whoops(i):
     return render_template('404.html'), 404
-
 @app.errorhandler(500)
 def internal_server_error(error):
     return render_template('404.html'), 500
 
-# for debugging
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(port=5000, debug=False)
