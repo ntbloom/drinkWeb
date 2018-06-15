@@ -16,6 +16,10 @@ h1.resultHeaders {
 	color: #000;
 }
 
+h1.404 {
+	color: #000;
+}
+
 div {
 	border-radius: 10px;
 	padding-left: 2em;
@@ -53,6 +57,10 @@ div.results {
 	color: #000;
 }
 
+p.404 {
+	text-align: center;
+}
+
 p {
 	font-family: 'Source Code Pro:400', monospace;
 	font-size: 1em;
@@ -62,6 +70,11 @@ p {
 p.directions {
 	color: #fff;
 	font-size: .75em;
+}
+
+p.404 {
+	font-size: 1.5em;
+	text-align: center;
 }
 
 form {

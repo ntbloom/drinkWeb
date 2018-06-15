@@ -47,7 +47,6 @@ def drinkSearch(incIngredients='', exclIngredients=''):
         for ingredient in incIngredients:
             included = ingredientRegex(ingredient)
             drinks = drinks & included
-
     # print('\n\nincluded drinks: ', sorted(drinks), '\n\n') #for debugging only
     # print('excluded drinks: ', excluded, '\n\n') #for debugging only
     if len(exclIngredients)>0:
@@ -55,13 +54,13 @@ def drinkSearch(incIngredients='', exclIngredients=''):
              unwanted = ingredientRegex(ingredient)
              drinks = drinks - unwanted
     drinks = sorted(drinks)
-    
+
     # debugging
     print('length of included: ', len(incIngredients))   #for debugging only
     print('included ingredients: ', incIngredients, '\n')  #for debugging only
     print('length of excluded: ', len(exclIngredients))   #for debugging only
     print('excluded ingredients: ', exclIngredients, '\n')  #for debugging only
-    
+
     return drinks
 
 def getRecipe(drinkName):

@@ -38,11 +38,23 @@ def printDrinks():
     # print('master: ', master) #for debugging
     included.clear()
     excluded.clear()
-    return render_template('results.html', drinks=master, qty = len(master))
+    if len(master)==0:
+        return render_template('resultsEmpty.html')
+    else:
+        return render_template('results.html', drinks=master, qty = len(master))
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
+@app.errorhandler(404)
+def whoops(i):
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def internal_server_error(error):
+    return render_template('404.html'), 500
+
+# for debugging
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
