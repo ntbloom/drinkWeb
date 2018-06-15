@@ -1,0 +1,79 @@
+
+
+body {
+	background-color: #fff;
+}
+
+h1 {
+	font-family: 'Source Code Pro:300', monospace;
+	color: #fff;
+	font-size: 24px;
+	font-weight: normal;
+	text-align: left;
+}
+
+h1.resultHeaders {
+	color: #000;
+}
+
+div {
+	border-radius: 10px;
+	padding-left: 2em;
+	padding-top: 0.5em;
+	padding-right: 0.5em;
+	padding-bottom: 0.5em;
+	margin-bottom: 1em;
+}
+
+div.logo {
+	background-color: #fff;
+	height: 140px;
+	padding-left: 2em;
+	padding-top: 1em;
+	padding-right: 0em;
+	padding-bottom: 0em;
+	text-align: center;
+}
+
+div.headers {
+	background-color: #a5693d;
+	color: #fff;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+}
+
+div.searchbar {
+	background-color: #4c4c4c;
+	font-family: 'Source Code Pro:400', monospace;
+	color: #ffffff;
+	margin-top: 1em;
+}
+
+div.results {
+	color: #000;
+}
+
+p {
+	font-family: 'Source Code Pro:400', monospace;
+	font-size: 1em;
+	padding-left: 3em;
+}
+
+p.directions {
+	color: #fff;
+	font-size: .75em;
+}
+
+form {
+	padding-left: 3em;
+}
+
+footer {
+	color: #4c4c4c;
+	font-family: 'Source Code Pro:300', monospace;
+	font-size: 0.75em;
+	position: center;
+	bottom: 0;
+	margin-top: 1em;
+	text-align: center;
+}
