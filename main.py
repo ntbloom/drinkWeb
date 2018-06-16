@@ -1,4 +1,6 @@
 #! usr/bin/env python3
+# main.py, the main Flask app on drinkWeb
+
 
 from flask import Flask, render_template, request
 import drinkFinder
