@@ -1,4 +1,4 @@
-<!-- index.html, main page for drinkBase website -->
+<!-- resultsEmpty.html, main page for drinkBase website -->
 
 <!doctype html>
 <html>
@@ -19,7 +19,12 @@
   </div>
 
   <div class="headers">
-    <h1>
+    <h1 onclick="goBack()">
+      <script type=text/javascript>
+        function goBack() {
+          window.history.back();
+        }
+        </script>
       back to search page
     </h1>
   </div>

@@ -56,6 +56,9 @@ def whoops(i):
 @app.errorhandler(500)
 def internal_server_error(error):
     return render_template('404.html'), 500
+@app.errorhandler(405)
+def whoops(i):
+    return render_template('404.html'), 405
 
 if __name__ == '__main__':
     app.run(port=5000, debug=False)
