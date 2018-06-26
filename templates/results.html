@@ -31,12 +31,15 @@
 
   <div class="searchbar">
     <h1>
-      {{ qty }} possible drinks:
+     :: {{ qty }} possible drinks  ::  including {{ included }}  ::  excluding {{ excluded }}  ::
     </h1>
     {% for i in drinks %}
-      <p>{{ i['name'] }} : {{ i['recipe'] }}</p>
+    <h2> {{ i['name'] }}:</h2>
+	{% for value in i['recipe'] %}
+    <h3> {{ value }}</h3>
+        {% endfor %}
+	<p><br></p>
     {% endfor %}
-
   </div>
 
   <footer>
