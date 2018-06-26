@@ -1,0 +1,9 @@
+*.db
+*.png
+/images
+*.idea
+*.git
+/drinkEnv
+__pycache__/
+/misc
+*.swp

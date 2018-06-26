@@ -8,13 +8,12 @@ import json
 
 app = Flask(__name__)
 
-included = []
-excluded = []
-
-
-
 @app.route('/results', methods=['POST'])
 def printDrinks():
+    included = []
+    excluded = []
+    included.clear()
+    excluded.clear()
     incl = request.form['includedIngredients']
     if len(incl)>1:
         incl = incl.split(',')
@@ -38,12 +37,18 @@ def printDrinks():
         drinks['recipe'] = ingredients
         master.append(drinks)
     # print('master: ', master) #for debugging
-    included.clear()
-    excluded.clear()
+    if len(included)!=0:
+        including = ', '.join(included)
+    else:
+        including = 'nothing'
+    if len(excluded)!=0:
+        excluding = ', '.join(excluded)
+    else:
+        excluding = 'nothing'
     if len(master)==0:
         return render_template('resultsEmpty.html')
     else:
-        return render_template('results.html', drinks=master, qty = len(master))
+        return render_template('results.html', drinks = master, qty = len(master), included = including, excluded = excluding)
 
 @app.route('/')
 def index():
@@ -61,4 +66,4 @@ def whoops(i):
     return render_template('404.html'), 405
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=False)
+    app.run(port=5000, debug=True)
