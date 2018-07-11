@@ -8,7 +8,7 @@ import json
 
 app = Flask(__name__)
 
-@app.route('/results', methods=['POST'])
+@app.route('/drinkbase/results', methods=['POST'])
 def printDrinks():
     included = []
     excluded = []
@@ -50,7 +50,7 @@ def printDrinks():
     else:
         return render_template('results.html', drinks = master, qty = len(master), included = including, excluded = excluding)
 
-@app.route('/')
+@app.route('/drinkbase')
 def index():
     return render_template('index.html')
 
