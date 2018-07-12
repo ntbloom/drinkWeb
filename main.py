@@ -66,5 +66,5 @@ def whoops(i):
     return render_template('404.html'), 405
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=False)
+    app.run()
 
