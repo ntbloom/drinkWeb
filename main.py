@@ -2,7 +2,7 @@
 # main.py, the main Flask app on drinkWeb
 
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 import drinkFinder
 import json
 
@@ -53,6 +53,10 @@ def printDrinks():
 @app.route('/drinkbase')
 def index():
     return render_template('index.html')
+
+@app.route('/')
+def forwarding():
+    return redirect('/drinkbase', code=302)
 
 # error handling
 @app.errorhandler(404)
