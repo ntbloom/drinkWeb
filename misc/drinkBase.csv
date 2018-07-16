@@ -211,10 +211,9 @@ Brandy Crusta,Luxardo Maraschino,oz,0.25
 Brandy Crusta,lemon spiral,garnish,1.0
 Brandy Crusta,sugar,rim,1.0
 Margarita,tequila,oz,2.0
-Margarita,triple sec,oz,0.875
-Margarita,lime juice,oz,0.875
-Margarita,lemon juice,oz,0.875
-Margarita,simple syrup,oz,0.67
+Margarita,Cointreau,oz,0.75
+Margarita,lime juice,oz,1
+Margarita,simple syrup or agave nectar,oz,0.5
 Margarita,salt,rim,1.0
 Last Word,gin,oz,0.75
 Last Word,Green Chartreuse,oz,0.75
@@ -267,9 +266,6 @@ Hemingway Daiquiri,grapefruit juice,oz,0.5
 Hemingway Daiquiri,Luxardo Maraschino,oz,0.5
 Hemingway Daiquiri,salt,pinch,1.0
 Hemingway Daiquiri,lime wheel,garnish,1.0
-Classic Daiquiri,white rum,oz,2.0
-Classic Daiquiri,lime juice,oz,0.875
-Classic Daiquiri,simple syrup,oz,0.75
 Honeysuckle,white rum,oz,2.0
 Honeysuckle,lime juice,oz,0.75
 Honeysuckle,honey simple syrup,oz,0.75
@@ -435,5 +431,142 @@ Bobby Burns,Angostura bitters,dash,1
 Boulevardier,rye whiskey,oz,1.5
 Boulevardier,Campari,oz,0.75
 Boulevardier,lemon twist,garnish,1
-
+Brooklyn,rye whiskey,oz,1
+Brooklyn,dry vermouth,oz,0.75
+Brooklyn,amaro,oz,0.25
+Brooklyn,Luxardo,tsp,1
+Brown Derby,bourbon or rye whiskey,oz,2
+Brown Derby,grapefruit juice,oz,1
+Brown Derby,lemon juice,tsp,1
+Brown Derby,honey syrup,oz,0.5
+Brown Derby,grapefruit,twist,1
+Caipirinha,lime,wedges,6
+Caipirinha,simple syrup,oz,0.75
+Caipirinha,sugar,cube,1
+Caipirinha,cachaca,oz,2
+Champs-Elysees,cognac,oz,2
+Champs-Elysees,green Chartreuse,oz,0.5
+Champs-Elysees,lemon juice,oz,0.75
+Champs-Elysees,simple syrup,oz,0.5
+Champs-Elysees,Angostura bitters,dashes,2
+Champs-Elysees,lemon,twist,1
+Dark & Stormy,dark rum,oz,2
+Dark & Stormy,lime juice,oz,0.75
+Dark & Stormy,ginger beer,oz,4
+Dark & Stormy,lime,wheel garnish,1
+Diamondback,rye whiskey,oz,2
+Diamondback,apple brandy,oz,0.5
+Diamondback,yellow Chartreuse,oz,0.5
+Fancy-Free,rye whiskey,oz,2
+Fancy-Free,Luxardo maraschino,oz,0.5
+Fancy-Free,Angostura bitters,dash,1
+Fancy-Free,orange bitters,dash,1
+Fancy-Free,orange,twist,1
+Fitzgerald,gin,oz,2
+Fitzgerald,lemon juice,oz,0.75
+Fitzgerald,simple syrup,oz,1
+Fitzgerald,Angostura bitters,dashes,2
+Fitzgerald,lemon,wedge,1
+French 95,bourbon,oz,2
+French 95,lemon juice,oz,0.75
+French 95,simple syrup,oz,0.5
+French 95,Champagne,oz,2.5
+Gin Fizz,gin,oz,2
+Gin Fizz,lemon juice,oz,0.75
+Gin Fizz,simple syrup,oz,0.75
+Gin Fizz,white,egg,1
+Gin Rickey,gin,oz,2
+Gin Rickey,lime juice,oz,1
+Gin Rickey,simple syrup,oz,0.5
+Gin Rickey,lime,wedge,1
+Grasshopper,mint,muddled leaves,8
+Grasshopper,creme de menthe,oz,1
+Grasshopper,heavy cream,oz,1
+Grasshopper,mint sprig,garnish,1
+Honeysuckle,white rum,oz,2
+Honeysuckle,lime juice,oz,0.75
+Honeysuckle,honey syrup,oz,0.75
+Honeysuckle,lime,wedge,1
+La Rosita,reposado tequila,oz,2
+La Rosita,Campari,oz,0.5
+La Rosita,sweet vermouth,oz,0.5
+La Rosita,dry vermouth,oz,0.5
+La Rosita,Angostura bitters,dashes,2
+La Rosita,orange,twist,1
+Lucien Gaudin,gin,oz,1.5
+Lucien Gaudin,dry vermouth,oz,0.5
+Lucien Gaudin,Campari,oz,0.5
+Lucien Gaudin,Cointreau,oz,0.5
+Lucien Gaudin,lemon,twist,1
+Martini,gin,oz,2.5
+Martini,dry vermouth,oz,0.75
+Martini,orange bitters,dash,1
+Martini,lemon twist,garnish,1
+Mint Julep,bourbon,oz,2
+Mint Julep,simple syrup,oz,0.75
+Mint Julep,mint bouquet,muddled,1
+Mojito,mint leaves,muddled,6
+Mojito,simple syrup,oz,0.75
+Mojito,rum,oz,2
+Mojito,lime juice,oz,1
+Mojito,Angostura bitters,drops,2
+Mojito,mint bouquet,garnish,1
+Old Pal,rye,oz,1.5
+Old Pal,Campari,oz,0.75
+Old Pal,dry vermouth,oz,0.75
+Old Pal,lemon twist,garnish,1
+Paloma,lime half,muddled,1
+Paloma,grapefruit juice,oz,1.5
+Paloma,simple syrup,oz,0.5
+Paloma,San Pellegrino grapefruit soda,topping,1
+Paloma,lime wheel,garnish,1
+Ping-Pong Cocktail,sloe gin,oz,2
+Ping-Pong Cocktail,dry vermouth,oz,0.5
+Ping-Pong Cocktail,bitter sweet vermouth or amaro,oz,0.5
+Ping-Pong Cocktail,orange bitters,dashes,2
+Ping-Pong Cocktail,lemon twist,garnish,1
+Pisco Sour,pisco,oz,2
+Pisco Sour,lemon juice,oz,0.5
+Pisco Sour,lime juice,oz,0.5
+Pisco Sour,simple syrup,oz,0.75
+Pisco Sour,egg white,dry shake,1
+Pisco Sour,Angostura bitters,drops,3
+Preakness,bourbon,oz,1.5
+Preakness,sweet vermouth,oz,0.75
+Preakness,Benedictine,oz,0.25
+Preakness,Angostura bitters,dashes,2
+Preakness,orange twist,garnish,1
+Queen's Park Swizzle,mint leaves,muddled,10
+Queen's Park Swizzle,simple syrup,oz,0.75
+Queen's Park Swizzle,sugar,cube,1
+Queen's Park Swizzle,aged rum,oz,2
+Queen's Park Swizzle,lime juice,oz,1
+Queen's Park Swizzle,Peychaud's bitters,dashes,4
+Queen's Park Swizzle,Angostura bitters,dashes,4
+Queen's Park Swizzle,mint sprig,garnish,1
+South Side,mint leaves,muddled,5
+South Side,gin,oz,2
+South Side,lime juice,oz,0.75
+South Side,simple syrup,oz,0.5
+South Side,Angostura bitters,dashes,2
+South Side,mint sprig,garnish,1
+Stinger,cognac,oz,2
+Stinger,creme de menthe,oz,0.5
+Stinger,simple syrup,tsp,1
+Stinger,mint sprig,garnish,1
+Tailspin,Capmari,rinse,1
+Tailspin,gin,oz,1.5
+Tailspin,sweet vermouth,oz,1
+Tailspin,green Chartreuse,oz,1
+Tailspin,orange bitters,dashes,2
+Tailspin,lemon twist,garnish,1
+Vesper,gin,oz,1.5
+Vesper,vodka,oz,0.75
+Vesper,Cocchi Americano,oz,0.5
+Vesper,lemon twist,garnish,1
+Ward 8,rye,oz,2
+Ward 8,lemon juice,oz,0.5
+Ward 8,orange juice,oz,0.5
+Ward 8,simple syrup,oz,0.5
+Ward 8,pomegranate molasses,tsp,1
 
