@@ -4,7 +4,6 @@
 
 from flask import Flask, render_template, request, redirect
 import drinkFinder
-import json
 
 app = Flask(__name__)
 
